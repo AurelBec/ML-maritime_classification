@@ -1,8 +1,7 @@
 # Maritime Classifier
 
-really easy CNN<br />
-
-Use tensorflow and kera librairies<br /><br />
+Really easy CNN<br />
+Uses tensorflow and kera librairies<br />
 
 datasets need to contain folders named with the name of the class the pictures inside belong like :
   - *training_set/*
