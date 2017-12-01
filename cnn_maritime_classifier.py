@@ -35,7 +35,7 @@ classifier.fit_generator(training_set, steps_per_epoch = 4774, epochs = 1, valid
 import numpy as np
 from keras.preprocessing import image
 
-file = 'dataset/single_prediction/test.jpg'
-result = classifier.predict(np.expand_dims(image.img_to_array(image.load_img(file, target_size = (100, 30))), axis = 0))
+tested = 'Mototopo'
+result = classifier.predict(np.expand_dims(image.img_to_array(image.load_img('dataset/single_prediction/'+tested+'.jpg', target_size = (100, 30))), axis = 0))
 id = test_set.class_indices
-print ('\Prediction: {} (expected Mototopo)'.format(list(id.keys())[list(id.values()).index(np.argmax(result[0]))]))
+print ('\nPrediction: {} (expected {})'.format(list(id.keys())[list(id.values()).index(np.argmax(result[0]))], tested))
