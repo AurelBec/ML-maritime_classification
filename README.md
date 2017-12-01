@@ -1,10 +1,10 @@
 # Maritime Classifier
 
-really easy CNN<b>
+really easy CNN<br />
 
-Use tensorflow and kera librairies<b><b>
+Use tensorflow and kera librairies<br /><br />
 
-data_sets need to contain folders named with the name of the class the pictures inside belong<b>
-*ex : TRAINING_SET/*<b>
-*        cats/*<b>
+data_sets need to contain folders named with the name of the class the pictures inside belong<br />
+*ex : TRAINING_SET/*<br />
+*        cats/*<br />
 *           imgs*
