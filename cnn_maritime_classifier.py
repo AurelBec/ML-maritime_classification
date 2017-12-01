@@ -28,14 +28,14 @@ from keras.preprocessing.image import ImageDataGenerator
 
 training_set = ImageDataGenerator(rescale = 1./255, shear_range = 0.2, zoom_range = 0.2, horizontal_flip = True).flow_from_directory('dataset/training_set', target_size = (100, 30))
 test_set = ImageDataGenerator(rescale = 1./255).flow_from_directory('dataset/test_set', target_size = (100, 30))
-classifier.fit_generator(training_set, steps_per_epoch = 4774, epochs = 10, validation_data = test_set, validation_steps = 1682)
+classifier.fit_generator(training_set, steps_per_epoch = 4774, epochs = 1, validation_data = test_set, validation_steps = 1682)
 
 
 # 3 - Making new predictions
 import numpy as np
 from keras.preprocessing import image
 
-file = 'dataset/test_set/Polizia/20130412_064127_20371.jpg'
+file = 'dataset/single_prediction/test.jpg'
 result = classifier.predict(np.expand_dims(image.img_to_array(image.load_img(file, target_size = (100, 30))), axis = 0))
 id = test_set.class_indices
-print(list(id.keys())[list(id.values()).index(np.argmax(result[0]))])
+print ('\Prediction: {} (expected Mototopo)'.format(list(id.keys())[list(id.values()).index(np.argmax(result[0]))]))
