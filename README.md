@@ -4,7 +4,7 @@ really easy CNN<br />
 
 Use tensorflow and kera librairies<br /><br />
 
-data_sets need to contain folders named with the name of the class the pictures inside belong like :
+datasets need to contain folders named with the name of the class the pictures inside belong like :
   - *training_set/*
     - *cats/*
       - *img1*
